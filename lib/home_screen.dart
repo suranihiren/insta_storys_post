@@ -15,8 +15,7 @@ import 'package:uidemo1/my_story_view.dart';
 import 'package:uidemo1/text_List_data.dart';
 
 import 'nav_bar.dart';
-List<PostModel> smSpaceList = [PostModel(profileImage: "images/8e9e1960-5745-44c6-8bb5-663087e57f67.jpg",description: "",chat:[],likes: 0,profilePost: "images/Naruto Uzumaki Wallpaper 4K (3).jpg",title: "Hiren",title2: "Hiren_Suarni",chatnumber: 0),
-  PostModel(profileImage: "images/person.jpg",description: "",chat:[],likes: 0,profilePost: "images/8e9e1960-5745-44c6-8bb5-663087e57f67.jpg",title2: "Prince",title: "Prince_Rawal",chatnumber: 0)];
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -37,6 +36,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
   // List imagesUrl = [
   //   'https://static.desygner.com/wp-content/uploads/sites/13/2022/05/04141642/Free-Stock-Photos-01.jpg'
   // ];
+  List<PostModel> smSpaceList = [PostModel(profileImage: "images/8e9e1960-5745-44c6-8bb5-663087e57f67.jpg",description: "A tall and underweight, honey skinned woman with thoughtful, light brown eyes, thin eyebrows and large ears. She has coiled, dark brown hair, seems shy, and she has small feet, weak legs, and narrow hips.",chat:[],likes: 0,profilePost: "images/Naruto Uzumaki Wallpaper 4K (3).jpg",title: "Hiren",title2: "Hiren_Suarni",chatnumber: 0), PostModel(profileImage: "images/person.jpg",description: "a round chin, an aquiline nose and small ears. He is bald, wears sunglasses, and he has slanted shoulders, and a long torso with no chest muscle tone ",chat:[],likes: 0,profilePost: "images/8e9e1960-5745-44c6-8bb5-663087e57f67.jpg",title2: "Prince",title: "Prince_Rawal",chatnumber: 0)];
+  List<PostModel> competitionsList = [PostModel(profileImage: "images/Chibi Blast_ Hero Suit Bakugou Artwork.jpg",description: "tall, pasty skinned woman with dark, dark green eyes, small ears and bony cheeks. She has straight, dark brown hair, has a realistic tattoo across her entire back, and she wears reddish blush and compli",chat:[],likes: 0,profilePost: "images/Cute Baby Monkey D_ Luffy Autumn_Fall Wallpaper.jpg",title: "Hiren",title2: "Hiren_Suarni",chatnumber: 0), PostModel(profileImage: "images/Cute Baby Monkey D_ Luffy Autumn_Fall Wallpaper.jpg",description: "hite skinned woman with alert, brown eyes, a softly shaped jaw, angular eyebrows, large ears and bony cheeks. She has curly, yellow-gold h",chat:[],likes: 0,profilePost: "images/Cute Baby Monkey D_ Luffy Autumn_Fall Wallpaper (1).jpg",title2: "Prince",title: "Prince_Rawal",chatnumber: 0)];
+  List<PostModel> mentorsList = [PostModel(profileImage: "images/Cute Baby Monkey D_ Luffy Autumn_Fall Wallpaper (2).jpg",description: "tall, fair skinned man with mysterious, brown eyes, plucked eyebrows, a pointed nose, very thin lips and a square jaw. He has wavy, golde",chat:[],likes: 0,profilePost: "images/Cute Baby Naruto Autumn _ Fall 4K Wallpaper.jpg",title: "Hiren",title2: "Hiren_Suarni",chatnumber: 0), PostModel(profileImage: "images/Cute Baby Naruto Autumn _ Fall 4K Wallpaper.jpg",description: "der, orange skinned man with composed green eyes, puffy cheeks, thin lips and no eyebrows. He has coiled, black hair,",chat:[],likes: 0,profilePost: "images/Cute Baby Naruto Autumn _ Fall 4K Wallpaper (1).jpg",title2: "Prince",title: "Prince_Rawal",chatnumber: 0)];
+  List<PostModel> searchList = [PostModel(profileImage: "images/f3041b90-f5b0-4bbd-b81a-d85e1e1f6c8b.jpg",description: "A short and average built, red skinned woman with steady, green eyes, a round chin and",chat:[],likes: 0,profilePost: "images/f3041b90-f5b0-4bbd-b81a-d85e1e1f6c8b.jpg",title: "Hiren",title2: "Hiren_Suarni",chatnumber: 0), PostModel(profileImage: "images/person.jpg",description: "der, orange skinned man with composed green eyes, puffy cheeks, thin lips and no eyebrows. He has coiled, black hair,",chat:[],likes: 0,profilePost: "images/Immerse Yourself in the World of Bleach Anime with Stunning 4K Wallpaper!.jpg",title2: "Prince",title: "Prince_Rawal",chatnumber: 0)];
 
   bool selected = false;
 
@@ -113,7 +116,7 @@ bottomNavigationBar: NavBar( pageIndex: selectedTab, onTap: (index) {
                   height: 100,
                   // width: 100,
                   child: SingleChildScrollView(
-                    physics: BouncingScrollPhysics(),
+                    physics: const BouncingScrollPhysics(),
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: [
@@ -125,7 +128,7 @@ bottomNavigationBar: NavBar( pageIndex: selectedTab, onTap: (index) {
                                 return MyStoryView(currentStoryIndex: myitem.indexOf(e),);
                               },));
                             },
-                            child: Container(padding: EdgeInsets.all(4),decoration: BoxDecoration(shape: BoxShape.circle,border: Border.all(color: Colors.indigo,width: 2.5,)),
+                            child: Container(padding: const EdgeInsets.all(4),decoration: BoxDecoration(shape: BoxShape.circle,border: Border.all(color: Colors.indigo,width: 2.5,)),
 
                               child: CircleAvatar(
                                 radius: 40,
@@ -155,7 +158,7 @@ bottomNavigationBar: NavBar( pageIndex: selectedTab, onTap: (index) {
                   labelColor: Colors.indigo,
                   tabAlignment: TabAlignment.center,
                   unselectedLabelColor: Colors.indigo,
-                  labelStyle: TextStyle(
+                  labelStyle: const TextStyle(
                       fontSize: 15,
                       fontFamily: 'poppins',
                       fontWeight: FontWeight.w700),
@@ -169,16 +172,16 @@ bottomNavigationBar: NavBar( pageIndex: selectedTab, onTap: (index) {
                     ),
                   ),
                   tabs:  [
-                    Tab(
+                    const Tab(
                       text: "  SM Space  ",
                     ),
-                    Tab(
+                    const Tab(
                       text: " Competitions ",
                     ),
-                    Tab(
+                    const Tab(
                       text: " Mentors ",
                     ),
-                    Tab(
+                    const Tab(
                       text: " ScheaSAsASA ",
                     ),
                   ]),
@@ -186,10 +189,10 @@ bottomNavigationBar: NavBar( pageIndex: selectedTab, onTap: (index) {
                    Flexible(
               child: SizedBox(
                 child:TabBarView(
-                    physics: AlwaysScrollableScrollPhysics(),
+                    physics: const AlwaysScrollableScrollPhysics(),
                     controller:tabControllerTo,
                     children: [
-                      SizedBox( /* height:MediaQuery.of(context).size.height * 0.87,*/
+                      SizedBox(
                         child: ListView.builder(itemCount: smSpaceList.length, itemBuilder: (context, index) {
                           return Column(
                             children: [
@@ -220,7 +223,7 @@ bottomNavigationBar: NavBar( pageIndex: selectedTab, onTap: (index) {
                                           color: Colors.grey, text: "prince_gupta"),
                                     ],
                                   ),
-                                  Spacer(),
+                                  const Spacer(),
                                   PopupMenuButton(
                                     icon: const Icon(Icons.more_vert,
                                         color: Colors.black),
@@ -286,7 +289,161 @@ bottomNavigationBar: NavBar( pageIndex: selectedTab, onTap: (index) {
                                             padding: const EdgeInsets.only(top: 30),
                                             child: MyStatefulWidget(smSpaceList[index].chat),
                                           );
-                                   /*       return Container(
+
+                                        },);
+                                      },
+                                      child: const Icon(
+                                        Icons.chat_bubble_outline,
+                                        color: Colors.grey,
+                                        size: 25,
+                                      ),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        right: 2, left: 8, top: 10),
+                                    child: textoutfit(
+                                        color: Colors.grey,
+                                        text: "${smSpaceList[index].chat.length} comments",
+                                        fontSize: 15),
+                                  ),
+                                  const Spacer(),
+                                  Padding(
+                                    padding:  const EdgeInsets.all(10),
+                                    child: InkWell(onTap: () {
+                                      // _onShare(context);
+                                    },
+                                      child: const Icon(
+                                        Icons.share,
+                                        color: Colors.grey,
+                                        size: 25,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Padding(
+                                padding:  const EdgeInsets.symmetric(horizontal: 15),
+                                child: textoutfit(
+                                    color: Colors.black87,
+                                    text:"${smSpaceList[index].description}",
+
+                                    fontSize: 15,textAlign: TextAlign.start,maxLine: isReadMore ?5:1,overflow: TextOverflow.ellipsis),
+                              ),
+                              GestureDetector(onTap: () {
+                                setState(() {
+                                  isReadMore = !isReadMore;
+                                });
+                              },child: Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 10),
+                                child: Row(mainAxisAlignment: MainAxisAlignment.end,
+                                  children: [
+                                    textoutfit(color: Colors.grey,text:isReadMore?"Read less": "more",),
+                                  ],
+                                ),
+                              )),
+                            ],
+                          );
+                        },),
+                      ),
+                      SizedBox(
+                        child: ListView.builder(itemCount: competitionsList.length, itemBuilder: (context, index) {
+                          return Column(
+                            children: [
+                              Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 15, horizontal: 15),
+                                    child: SizedBox(
+                                      height:
+                                      MediaQuery.of(context).size.height * 0.05,
+                                      width:
+                                      MediaQuery.of(context).size.height * 0.05,
+                                      child: CircleAvatar(
+                                        backgroundImage:
+                                        AssetImage(competitionsList[index].profileImage.toString()),
+                                      ),
+                                    ),
+                                  ),
+                                  Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      textoutfit(
+                                          color: Colors.black,
+                                          text: "${competitionsList[index].title}",
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w600),
+                                      textoutfit(
+                                          color: Colors.grey, text: "prince_gupta"),
+                                    ],
+                                  ),
+                                  const Spacer(),
+                                  PopupMenuButton(
+                                    icon: const Icon(Icons.more_vert,
+                                        color: Colors.black),
+                                    itemBuilder: (ctx) => [
+                                      _buildPopupMenuItem('Search'),
+                                      _buildPopupMenuItem('Upload'),
+                                      _buildPopupMenuItem('Copy'),
+                                      _buildPopupMenuItem('Exit'),
+                                    ],
+                                  )
+                                ],
+                              ),
+                              Container(
+                                height: MediaQuery.of(context).size.width * 1,
+                                width: MediaQuery.of(context).size.width * 1,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image: AssetImage("${competitionsList[index].profilePost}"),
+                                        fit: BoxFit.cover)),
+                              ),
+                              Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        right: 2, left: 25, top: 10),
+                                    child: GestureDetector(
+                                        onTap: () {
+                                          setState(() {
+                                            // selectedLike = !selectedLike;
+                                            // if(selectedLike==true){
+                                            competitionsList[index].likes++;
+                                            // }
+                                            // print("likeplus-=-------${likeplus}");
+
+                                          });
+
+                                        },
+                                        child: Icon(
+                                          competitionsList[index].likes != 0
+                                              ? Icons.favorite
+                                              : Icons.favorite_border,
+                                          color: /*selectedLike*/ competitionsList[index].likes != 0
+                                              ? Colors.red
+                                              : Colors.grey,
+                                          size: 25,
+                                        )),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        right: 2, left: 8, top: 10),
+                                    child: textoutfit(
+                                        color: Colors.grey,
+                                        text: "${competitionsList[index].likes} Likes",
+                                        fontSize: 15),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        right: 2, left: 20, top: 10),
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        showModalBottomSheet(context: context,isScrollControlled: true, builder: (context) {
+                                          return Padding(
+                                            padding: const EdgeInsets.only(top: 30),
+                                            child: MyStatefulWidget(competitionsList[index].chat),
+                                          );
+                                          /*       return Container(
                                             decoration: BoxDecoration(color: Colors.white12),
                                             child: Column(
                                               mainAxisAlignment: MainAxisAlignment.start,
@@ -316,7 +473,7 @@ bottomNavigationBar: NavBar( pageIndex: selectedTab, onTap: (index) {
                                           );*/
                                         },);
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.chat_bubble_outline,
                                         color: Colors.grey,
                                         size: 25,
@@ -328,16 +485,16 @@ bottomNavigationBar: NavBar( pageIndex: selectedTab, onTap: (index) {
                                         right: 2, left: 8, top: 10),
                                     child: textoutfit(
                                         color: Colors.grey,
-                                        text: "${smSpaceList[index].chat.length} comments",
+                                        text: "${competitionsList[index].chat.length} comments",
                                         fontSize: 15),
                                   ),
-                                  Spacer(),
+                                  const Spacer(),
                                   Padding(
-                                    padding:  EdgeInsets.all(10),
+                                    padding:  const EdgeInsets.all(10),
                                     child: InkWell(onTap: () {
                                       // _onShare(context);
                                     },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.share,
                                         color: Colors.grey,
                                         size: 25,
@@ -347,12 +504,12 @@ bottomNavigationBar: NavBar( pageIndex: selectedTab, onTap: (index) {
                                 ],
                               ),
                               Padding(
-                                padding:  EdgeInsets.symmetric(horizontal: 15),
+                                padding:  const EdgeInsets.symmetric(horizontal: 15),
                                 child: textoutfit(
                                     color: Colors.black87,
-                                    text:"${smSpaceList[index].description}",
+                                    text:"${competitionsList[index].description}",
 
-                                    fontSize: 15,textAlign: TextAlign.center,maxLine: isReadMore ?5:1,overflow: TextOverflow.ellipsis),
+                                    fontSize: 15,textAlign: TextAlign.start,maxLine: isReadMore ?5:1,overflow: TextOverflow.ellipsis),
                               ),
                               GestureDetector(onTap: () {
                                 setState(() {
@@ -370,1001 +527,313 @@ bottomNavigationBar: NavBar( pageIndex: selectedTab, onTap: (index) {
                           );
                         },),
                       ),
-                      SizedBox( /* height:MediaQuery.of(context).size.height * 0.87,*/
-
-                        child: SingleChildScrollView(
-                          scrollDirection: Axis.vertical,
-                          child: Column(
+                      SizedBox(
+                        child: ListView.builder(itemCount: mentorsList.length, itemBuilder: (context, index) {
+                          return Column(
                             children: [
-                              Container(
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                              vertical: 15, horizontal: 15),
-                                          child: SizedBox(
-                                            height:
-                                            MediaQuery.of(context).size.height * 0.05,
-                                            width:
-                                            MediaQuery.of(context).size.height * 0.05,
-                                            child: CircleAvatar(
-                                              backgroundImage:
-                                              AssetImage('images/Cute Baby Naruto Autumn _ Fall 4K Wallpaper.jpg'),
-                                            ),
-                                          ),
-                                        ),
-                                        Column(
-                                          children: [
-                                            textoutfit(
-                                                color: Colors.black,
-                                                text: "Prince Gupta",
-                                                fontSize: 15,
-                                                fontWeight: FontWeight.w600),
-                                            textoutfit(
-                                                color: Colors.grey, text: "prince_gupta"),
-                                          ],
-                                        ),
-                                        Spacer(),
-                                        PopupMenuButton(
-                                          icon: const Icon(Icons.more_vert,
-                                              color: Colors.black),
-                                          itemBuilder: (ctx) => [
-                                            _buildPopupMenuItem('Search'),
-                                            _buildPopupMenuItem('Upload'),
-                                            _buildPopupMenuItem('Copy'),
-                                            _buildPopupMenuItem('Exit'),
-                                          ],
-                                        )
-                                      ],
-                                    ),
-                                    Container(
-                                      height: MediaQuery.of(context).size.width * 1,
-                                      width: MediaQuery.of(context).size.width * 1,
-                                      decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                              image: AssetImage("images/Cute Baby Naruto Autumn _ Fall 4K Wallpaper (1).jpg"),
-                                              fit: BoxFit.cover)),
-                                    ),
-                                    Row(
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              right: 2, left: 25, top: 10),
-                                          child: GestureDetector(
-                                              onTap: () {
-                                                setState(() {
-                                                  selectedLike = !selectedLike;
-                                                  if(selectedLike==true){
-                                                    likeplus++;
-                                                  }
-                                                  print("likeplus-=-------${likeplus}");
-
-                                                });
-
-                                              },
-                                              child: Icon(
-                                                selectedLike
-                                                    ? Icons.favorite
-                                                    : Icons.favorite_border,
-                                                color: selectedLike
-                                                    ? Colors.red
-                                                    : Colors.grey,
-                                                size: 25,
-                                              )),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              right: 2, left: 8, top: 10),
-                                          child: textoutfit(
-                                              color: Colors.grey,
-                                              text: "$likeplus Likes",
-                                              fontSize: 15),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              right: 2, left: 20, top: 10),
-                                          child: GestureDetector(
-                                            onTap: () {
-                                              showModalBottomSheet(context: context,isScrollControlled: true, builder: (context) {
-                                                return Container()
-                                                // return MyStatefulWidget();
-                                                /*return Container(
-                                                   decoration: BoxDecoration(color: Colors.white12),
-                                                   child: Column(
-                                                     mainAxisAlignment: MainAxisAlignment.start,
-                                                     children: <Widget>[
-                                                       TextFormField(
-                                                         controller: textController,
-
-                                                       ),
-                                                       TextButton(
-                                                         onPressed: () {
-                                                           setState(() {
-                                                             if(textController.text.length>0){
-                                                               text.add(textController.text);
-                                                               textController.clear();
-                                                             } else{
-                                                               ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                                                                 content: Text("Text is empty"),
-                                                               ));
-                                                             }
-                                                           });
-                                                         },
-                                                         child: Text("add"),
-                                                       ),
-                                                       Text(text.isNotEmpty?text.toString():""),
-                                                     ],
-                                                   ),
-                                                 )*/;
-                                              },);
-                                            },
-                                            child: Icon(
-                                              Icons.chat_bubble_outline,
-                                              color: Colors.grey,
-                                              size: 25,
-                                            ),
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              right: 2, left: 8, top: 10),
-                                          child: textoutfit(
-                                              color: Colors.grey,
-                                              text: "$textSend comments",
-                                              fontSize: 15),
-                                        ),
-                                        Spacer(),
-                                        Padding(
-                                          padding:  EdgeInsets.all(10),
-                                          child: InkWell(onTap: () {
-                                            // _onShare(context);
-                                          },
-                                            child: Icon(
-                                              Icons.share,
-                                              color: Colors.grey,
-                                              size: 25,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Padding(
-                                      padding:  EdgeInsets.symmetric(horizontal: 15),
-                                      child: textoutfit(
-                                          color: Colors.black87,
-                                          text:
-                                          "Once Brahma divided sugarcane among his sons and each of them ate his share, but the Kumhara who was greatly absorbed in his work, forgot to eat. The piece which he had kept near his clay lump struck root and soon grew into a sugarcane plant. A few days later, when Brahma asked his sons for sugarcane, none of them could give it to him, excepting the Kumhara who offered a full plant. Brahma was pleased by the devotion of the potter to his work and awarded",
-                                          fontSize: 15,textAlign: TextAlign.center,maxLine: isReadMore ?5:1,overflow: TextOverflow.ellipsis),
-                                    ),
-                                    GestureDetector(onTap: () {
-                                      setState(() {
-                                        isReadMore = !isReadMore;
-                                      });
-                                    },child: Padding(
-                                      padding: const EdgeInsets.symmetric(horizontal: 10),
-                                      child: Row(mainAxisAlignment: MainAxisAlignment.end,
-                                        children: [
-                                          textoutfit(color: Colors.grey,text:isReadMore?"Read less": "more",),
-                                        ],
+                              Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 15, horizontal: 15),
+                                    child: SizedBox(
+                                      height:
+                                      MediaQuery.of(context).size.height * 0.05,
+                                      width:
+                                      MediaQuery.of(context).size.height * 0.05,
+                                      child: CircleAvatar(
+                                        backgroundImage:
+                                        AssetImage(mentorsList[index].profileImage.toString()),
                                       ),
-                                    )),
-                                  ],
-                                ),
+                                    ),
+                                  ),
+                                  Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      textoutfit(
+                                          color: Colors.black,
+                                          text: "${mentorsList[index].title}",
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w600),
+                                      textoutfit(
+                                          color: Colors.grey, text: "prince_gupta"),
+                                    ],
+                                  ),
+                                  const Spacer(),
+                                  PopupMenuButton(
+                                    icon: const Icon(Icons.more_vert,
+                                        color: Colors.black),
+                                    itemBuilder: (ctx) => [
+                                      _buildPopupMenuItem('Search'),
+                                      _buildPopupMenuItem('Upload'),
+                                      _buildPopupMenuItem('Copy'),
+                                      _buildPopupMenuItem('Exit'),
+                                    ],
+                                  )
+                                ],
                               ),
                               Container(
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                              vertical: 15, horizontal: 15),
-                                          child: SizedBox(
-                                            height:
-                                            MediaQuery.of(context).size.height * 0.05,
-                                            width:
-                                            MediaQuery.of(context).size.height * 0.05,
-                                            child: CircleAvatar(
-                                              backgroundImage:
-                                              AssetImage('images/Naruto Uzumaki Wallpaper 4K.jpg'),
-                                            ),
-                                          ),
-                                        ),
-                                        Column(
-                                          children: [
-                                            textoutfit(
-                                                color: Colors.black,
-                                                text: "Prince Gupta",
-                                                fontSize: 15,
-                                                fontWeight: FontWeight.w600),
-                                            textoutfit(
-                                                color: Colors.grey, text: "prince_gupta"),
-                                          ],
-                                        ),
-                                        Spacer(),
-                                        PopupMenuButton(
-                                          icon: const Icon(Icons.more_vert,
-                                              color: Colors.black),
-                                          itemBuilder: (ctx) => [
-                                            _buildPopupMenuItem('Search'),
-                                            _buildPopupMenuItem('Upload'),
-                                            _buildPopupMenuItem('Copy'),
-                                            _buildPopupMenuItem('Exit'),
-                                          ],
-                                        )
-                                      ],
-                                    ),
-                                    Container(
-                                      height: MediaQuery.of(context).size.width * 1,
-                                      width: MediaQuery.of(context).size.width * 1,
-                                      decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                              image: AssetImage("images/Naruto Uzumaki Wallpaper 4K.jpg"),
-                                              fit: BoxFit.cover)),
-                                    ),
-                                    Row(
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              right: 2, left: 25, top: 10),
-                                          child: GestureDetector(
-                                              onTap: () {
-                                                setState(() {
-                                                  selectedLike = !selectedLike;
-                                                  if(selectedLike==true){
-                                                    likeplus++;
-                                                  }
+                                height: MediaQuery.of(context).size.width * 1,
+                                width: MediaQuery.of(context).size.width * 1,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image: AssetImage("${mentorsList[index].profilePost}"),
+                                        fit: BoxFit.cover)),
+                              ),
+                              Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        right: 2, left: 25, top: 10),
+                                    child: GestureDetector(
+                                        onTap: () {
+                                          setState(() {
+                                            // selectedLike = !selectedLike;
+                                            // if(selectedLike==true){
+                                            mentorsList[index].likes++;
+                                            // }
+                                            // print("likeplus-=-------${likeplus}");
 
+                                          });
 
-                                                });
+                                        },
+                                        child: Icon(
+                                          mentorsList[index].likes != 0
+                                              ? Icons.favorite
+                                              : Icons.favorite_border,
+                                          color: /*selectedLike*/ mentorsList[index].likes != 0
+                                              ? Colors.red
+                                              : Colors.grey,
+                                          size: 25,
+                                        )),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        right: 2, left: 8, top: 10),
+                                    child: textoutfit(
+                                        color: Colors.grey,
+                                        text: "${mentorsList[index].likes} Likes",
+                                        fontSize: 15),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        right: 2, left: 20, top: 10),
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        showModalBottomSheet(context: context,isScrollControlled: true, builder: (context) {
+                                          return Padding(
+                                            padding: const EdgeInsets.only(top: 30),
+                                            child: MyStatefulWidget(mentorsList[index].chat),
+                                          );
 
-                                              },
-                                              child: Icon(
-                                                selectedLike
-                                                    ? Icons.favorite
-                                                    : Icons.favorite_border,
-                                                color: selectedLike
-                                                    ? Colors.red
-                                                    : Colors.grey,
-                                                size: 25,
-                                              )),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              right: 2, left: 8, top: 10),
-                                          child: textoutfit(
-                                              color: Colors.grey,
-                                              text: "$likeplus Likes",
-                                              fontSize: 15),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              right: 2, left: 20, top: 10),
-                                          child: GestureDetector(
-                                            onTap: () {
-                                              showModalBottomSheet(context: context,isScrollControlled: true, builder: (context) {
-                                                return Container();
-                                                // return MyStatefulWidget();
-                                              },);
-                                            },
-                                            child: Icon(
-                                              Icons.chat_bubble_outline,
-                                              color: Colors.grey,
-                                              size: 25,
-                                            ),
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              right: 2, left: 8, top: 10),
-                                          child: textoutfit(
-                                              color: Colors.grey,
-                                              text: "$textSend comments",
-                                              fontSize: 15),
-                                        ),
-                                        Spacer(),
-                                        Padding(
-                                          padding: const EdgeInsets.all(10),
-                                          child: Icon(
-                                            Icons.share,
-                                            color: Colors.grey,
-                                            size: 25,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Padding(
-                                      padding:  EdgeInsets.symmetric(horizontal: 15),
-                                      child: textoutfit(
-                                          color: Colors.black87,
-                                          text:
-                                          "Once Brahma divided sugarcane among his sons and each of them ate his share, but the Kumhara who was greatly absorbed in his work, forgot to eat. The piece which he had kept near his clay lump struck root and soon grew into a sugarcane plant. A few days later, when Brahma asked his sons for sugarcane, none of them could give it to him, excepting the Kumhara who offered a full plant. Brahma was pleased by the devotion of the potter to his work and awarded",
-                                          fontSize: 15,textAlign: TextAlign.center,maxLine: isReadMore ?5:1,overflow: TextOverflow.ellipsis),
-                                    ),
-                                    GestureDetector(onTap: () {
-                                      setState(() {
-                                        isReadMore = !isReadMore;
-                                      });
-                                    },child: Padding(
-                                      padding: const EdgeInsets.symmetric(horizontal: 10),
-                                      child: Row(mainAxisAlignment: MainAxisAlignment.end,
-                                        children: [
-                                          textoutfit(color: Colors.grey,text:isReadMore?"Read less": "more",),
-                                        ],
+                                        },);
+                                      },
+                                      child: const Icon(
+                                        Icons.chat_bubble_outline,
+                                        color: Colors.grey,
+                                        size: 25,
                                       ),
-                                    )),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        right: 2, left: 8, top: 10),
+                                    child: textoutfit(
+                                        color: Colors.grey,
+                                        text: "${mentorsList[index].chat.length} comments",
+                                        fontSize: 15),
+                                  ),
+                                  const Spacer(),
+                                  Padding(
+                                    padding:  const EdgeInsets.all(10),
+                                    child: InkWell(onTap: () {
+                                      // _onShare(context);
+                                    },
+                                      child: const Icon(
+                                        Icons.share,
+                                        color: Colors.grey,
+                                        size: 25,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Padding(
+                                padding:  const EdgeInsets.symmetric(horizontal: 15),
+                                child: textoutfit(
+                                    color: Colors.black87,
+                                    text:"${mentorsList[index].description}",
+
+                                    fontSize: 15,textAlign: TextAlign.start,maxLine: isReadMore ?5:1,overflow: TextOverflow.ellipsis),
+                              ),
+                              GestureDetector(onTap: () {
+                                setState(() {
+                                  isReadMore = !isReadMore;
+                                });
+                              },child: Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 10),
+                                child: Row(mainAxisAlignment: MainAxisAlignment.end,
+                                  children: [
+                                    textoutfit(color: Colors.grey,text:isReadMore?"Read less": "more",),
                                   ],
                                 ),
-                              ),
+                              )),
                             ],
-                          ),
-                        ),
+                          );
+                        },),
                       ),
-                      SizedBox( /* height:MediaQuery.of(context).size.height * 0.87,*/
-
-                        child: SingleChildScrollView(
-                          scrollDirection: Axis.vertical,
-                          child: Column(
+                      SizedBox(
+                        child: ListView.builder(itemCount: searchList.length, itemBuilder: (context, index) {
+                          return Column(
                             children: [
-                              Container(
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                              vertical: 15, horizontal: 15),
-                                          child: SizedBox(
-                                            height:
-                                            MediaQuery.of(context).size.height * 0.05,
-                                            width:
-                                            MediaQuery.of(context).size.height * 0.05,
-                                            child: CircleAvatar(
-                                              backgroundImage:
-                                              AssetImage('images/Gaara Wallpaper 4K.jpg'),
-                                            ),
-                                          ),
-                                        ),
-                                        Column(
-                                          children: [
-                                            textoutfit(
-                                                color: Colors.black,
-                                                text: "Gaara",
-                                                fontSize: 15,
-                                                fontWeight: FontWeight.w600),
-                                            textoutfit(
-                                                color: Colors.grey, text: "Gaara"),
-                                          ],
-                                        ),
-                                        Spacer(),
-                                        PopupMenuButton(
-                                          icon: const Icon(Icons.more_vert,
-                                              color: Colors.black),
-                                          itemBuilder: (ctx) => [
-                                            _buildPopupMenuItem('Search'),
-                                            _buildPopupMenuItem('Upload'),
-                                            _buildPopupMenuItem('Copy'),
-                                            _buildPopupMenuItem('Exit'),
-                                          ],
-                                        )
-                                      ],
-                                    ),
-                                    Container(
-                                      height: MediaQuery.of(context).size.width * 1,
-                                      width: MediaQuery.of(context).size.width * 1,
-                                      decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                              image: AssetImage("images/Gaara Wallpaper 4K.jpg"),
-                                              fit: BoxFit.cover)),
-                                    ),
-                                    Row(
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              right: 2, left: 25, top: 10),
-                                          child: GestureDetector(
-                                              onTap: () {
-                                                setState(() {
-                                                  selectedLike = !selectedLike;
-                                                  if(selectedLike==true){
-                                                    likeplus++;
-                                                  }
-                                                  print("likeplus-=-------${likeplus}");
-
-                                                });
-
-                                              },
-                                              child: Icon(
-                                                selectedLike
-                                                    ? Icons.favorite
-                                                    : Icons.favorite_border,
-                                                color: selectedLike
-                                                    ? Colors.red
-                                                    : Colors.grey,
-                                                size: 25,
-                                              )),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              right: 2, left: 8, top: 10),
-                                          child: textoutfit(
-                                              color: Colors.grey,
-                                              text: "$likeplus Likes",
-                                              fontSize: 15),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              right: 2, left: 20, top: 10),
-                                          child: GestureDetector(
-                                            onTap: () {
-                                              showModalBottomSheet(context: context,isScrollControlled: true, builder: (context) {
-                                                return Container()
-                                                // return MyStatefulWidget();
-                                                /*return Container(
-                                                   decoration: BoxDecoration(color: Colors.white12),
-                                                   child: Column(
-                                                     mainAxisAlignment: MainAxisAlignment.start,
-                                                     children: <Widget>[
-                                                       TextFormField(
-                                                         controller: textController,
-
-                                                       ),
-                                                       TextButton(
-                                                         onPressed: () {
-                                                           setState(() {
-                                                             if(textController.text.length>0){
-                                                               text.add(textController.text);
-                                                               textController.clear();
-                                                             } else{
-                                                               ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                                                                 content: Text("Text is empty"),
-                                                               ));
-                                                             }
-                                                           });
-                                                         },
-                                                         child: Text("add"),
-                                                       ),
-                                                       Text(text.isNotEmpty?text.toString():""),
-                                                     ],
-                                                   ),
-                                                 )*/;
-                                              },);
-                                            },
-                                            child: Icon(
-                                              Icons.chat_bubble_outline,
-                                              color: Colors.grey,
-                                              size: 25,
-                                            ),
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              right: 2, left: 8, top: 10),
-                                          child: textoutfit(
-                                              color: Colors.grey,
-                                              text: "$textSend comments",
-                                              fontSize: 15),
-                                        ),
-                                        Spacer(),
-                                        Padding(
-                                          padding:  EdgeInsets.all(10),
-                                          child: InkWell(onTap: () {
-                                            // _onShare(context);
-                                          },
-                                            child: Icon(
-                                              Icons.share,
-                                              color: Colors.grey,
-                                              size: 25,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Padding(
-                                      padding:  EdgeInsets.symmetric(horizontal: 15),
-                                      child: textoutfit(
-                                          color: Colors.black87,
-                                          text:
-                                          "Once Brahma divided sugarcane among his sons and each of them ate his share, but the Kumhara who was greatly absorbed in his work, forgot to eat. The piece which he had kept near his clay lump struck root and soon grew into a sugarcane plant. A few days later, when Brahma asked his sons for sugarcane, none of them could give it to him, excepting the Kumhara who offered a full plant. Brahma was pleased by the devotion of the potter to his work and awarded",
-                                          fontSize: 15,textAlign: TextAlign.center,maxLine: isReadMore ?5:1,overflow: TextOverflow.ellipsis),
-                                    ),
-                                    GestureDetector(onTap: () {
-                                      setState(() {
-                                        isReadMore = !isReadMore;
-                                      });
-                                    },child: Padding(
-                                      padding: const EdgeInsets.symmetric(horizontal: 10),
-                                      child: Row(mainAxisAlignment: MainAxisAlignment.end,
-                                        children: [
-                                          textoutfit(color: Colors.grey,text:isReadMore?"Read less": "more",),
-                                        ],
+                              Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 15, horizontal: 15),
+                                    child: SizedBox(
+                                      height:
+                                      MediaQuery.of(context).size.height * 0.05,
+                                      width:
+                                      MediaQuery.of(context).size.height * 0.05,
+                                      child: CircleAvatar(
+                                        backgroundImage:
+                                        AssetImage(searchList[index].profileImage.toString()),
                                       ),
-                                    )),
-                                  ],
-                                ),
+                                    ),
+                                  ),
+                                  Column(crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      textoutfit(
+                                          color: Colors.black,
+                                          text: "${searchList[index].title}",
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w600),
+                                      textoutfit(
+                                          color: Colors.grey, text: "prince_gupta"),
+                                    ],
+                                  ),
+                                  const Spacer(),
+                                  PopupMenuButton(
+                                    icon: const Icon(Icons.more_vert,
+                                        color: Colors.black),
+                                    itemBuilder: (ctx) => [
+                                      _buildPopupMenuItem('Search'),
+                                      _buildPopupMenuItem('Upload'),
+                                      _buildPopupMenuItem('Copy'),
+                                      _buildPopupMenuItem('Exit'),
+                                    ],
+                                  )
+                                ],
                               ),
                               Container(
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                              vertical: 15, horizontal: 15),
-                                          child: SizedBox(
-                                            height:
-                                            MediaQuery.of(context).size.height * 0.05,
-                                            width:
-                                            MediaQuery.of(context).size.height * 0.05,
-                                            child: CircleAvatar(
-                                              backgroundImage:
-                                              AssetImage('images/Immerse Yourself in the World of Bleach Anime with Stunning 4K Wallpaper!.jpg'),
-                                            ),
-                                          ),
-                                        ),
-                                        Column(
-                                          children: [
-                                            textoutfit(
-                                                color: Colors.black,
-                                                text: "gaara to",
-                                                fontSize: 15,
-                                                fontWeight: FontWeight.w600),
-                                            textoutfit(
-                                                color: Colors.grey, text: "prince_gupta"),
-                                          ],
-                                        ),
-                                        Spacer(),
-                                        PopupMenuButton(
-                                          icon: const Icon(Icons.more_vert,
-                                              color: Colors.black),
-                                          itemBuilder: (ctx) => [
-                                            _buildPopupMenuItem('Search'),
-                                            _buildPopupMenuItem('Upload'),
-                                            _buildPopupMenuItem('Copy'),
-                                            _buildPopupMenuItem('Exit'),
-                                          ],
-                                        )
-                                      ],
-                                    ),
-                                    Container(
-                                      height: MediaQuery.of(context).size.width * 1,
-                                      width: MediaQuery.of(context).size.width * 1,
-                                      decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                              image: AssetImage("images/Immerse Yourself in the World of Bleach Anime with Stunning 4K Wallpaper!.jpg"),
-                                              fit: BoxFit.cover)),
-                                    ),
-                                    Row(
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              right: 2, left: 25, top: 10),
-                                          child: GestureDetector(
-                                              onTap: () {
-                                                setState(() {
-                                                  selectedLike = !selectedLike;
-                                                  if(selectedLike==true){
-                                                    likeplus++;
-                                                  }
+                                height: MediaQuery.of(context).size.width * 1,
+                                width: MediaQuery.of(context).size.width * 1,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image: AssetImage("${searchList[index].profilePost}"),
+                                        fit: BoxFit.cover)),
+                              ),
+                              Row(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        right: 2, left: 25, top: 10),
+                                    child: GestureDetector(
+                                        onTap: () {
+                                          setState(() {
+                                            // selectedLike = !selectedLike;
+                                            // if(selectedLike==true){
+                                            searchList[index].likes++;
+                                            // }
+                                            // print("likeplus-=-------${likeplus}");
 
+                                          });
 
-                                                });
+                                        },
+                                        child: Icon(
+                                          searchList[index].likes != 0
+                                              ? Icons.favorite
+                                              : Icons.favorite_border,
+                                          color: /*selectedLike*/ searchList[index].likes != 0
+                                              ? Colors.red
+                                              : Colors.grey,
+                                          size: 25,
+                                        )),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        right: 2, left: 8, top: 10),
+                                    child: textoutfit(
+                                        color: Colors.grey,
+                                        text: "${searchList[index].likes} Likes",
+                                        fontSize: 15),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        right: 2, left: 20, top: 10),
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        showModalBottomSheet(context: context,isScrollControlled: true, builder: (context) {
+                                          return Padding(
+                                            padding: const EdgeInsets.only(top: 30),
+                                            child: MyStatefulWidget(searchList[index].chat),
+                                          );
 
-                                              },
-                                              child: Icon(
-                                                selectedLike
-                                                    ? Icons.favorite
-                                                    : Icons.favorite_border,
-                                                color: selectedLike
-                                                    ? Colors.red
-                                                    : Colors.grey,
-                                                size: 25,
-                                              )),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              right: 2, left: 8, top: 10),
-                                          child: textoutfit(
-                                              color: Colors.grey,
-                                              text: "$likeplus Likes",
-                                              fontSize: 15),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              right: 2, left: 20, top: 10),
-                                          child: GestureDetector(
-                                            onTap: () {
-                                              showModalBottomSheet(context: context,isScrollControlled: true, builder: (context) {
-                                                return Container();
-                                                // return MyStatefulWidget();
-                                              },);
-                                            },
-                                            child: Icon(
-                                              Icons.chat_bubble_outline,
-                                              color: Colors.grey,
-                                              size: 25,
-                                            ),
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              right: 2, left: 8, top: 10),
-                                          child: textoutfit(
-                                              color: Colors.grey,
-                                              text: "$textSend comments",
-                                              fontSize: 15),
-                                        ),
-                                        Spacer(),
-                                        Padding(
-                                          padding: const EdgeInsets.all(10),
-                                          child: Icon(
-                                            Icons.share,
-                                            color: Colors.grey,
-                                            size: 25,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Padding(
-                                      padding:  EdgeInsets.symmetric(horizontal: 15),
-                                      child: textoutfit(
-                                          color: Colors.black87,
-                                          text:
-                                          "Once Brahma divided sugarcane among his sons and each of them ate his share, but the Kumhara who was greatly absorbed in his work, forgot to eat. The piece which he had kept near his clay lump struck root and soon grew into a sugarcane plant. A few days later, when Brahma asked his sons for sugarcane, none of them could give it to him, excepting the Kumhara who offered a full plant. Brahma was pleased by the devotion of the potter to his work and awarded",
-                                          fontSize: 15,textAlign: TextAlign.center,maxLine: isReadMore ?5:1,overflow: TextOverflow.ellipsis),
-                                    ),
-                                    GestureDetector(onTap: () {
-                                      setState(() {
-                                        isReadMore = !isReadMore;
-                                      });
-                                    },child: Padding(
-                                      padding: const EdgeInsets.symmetric(horizontal: 10),
-                                      child: Row(mainAxisAlignment: MainAxisAlignment.end,
-                                        children: [
-                                          textoutfit(color: Colors.grey,text:isReadMore?"Read less": "more",),
-                                        ],
+                                        },);
+                                      },
+                                      child: const Icon(
+                                        Icons.chat_bubble_outline,
+                                        color: Colors.grey,
+                                        size: 25,
                                       ),
-                                    )),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(
+                                        right: 2, left: 8, top: 10),
+                                    child: textoutfit(
+                                        color: Colors.grey,
+                                        text: "${searchList[index].chat.length} comments",
+                                        fontSize: 15),
+                                  ),
+                                  const Spacer(),
+                                  Padding(
+                                    padding:  const EdgeInsets.all(10),
+                                    child: InkWell(onTap: () {
+                                      // _onShare(context);
+                                    },
+                                      child: const Icon(
+                                        Icons.share,
+                                        color: Colors.grey,
+                                        size: 25,
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              Padding(
+                                padding:  const EdgeInsets.symmetric(horizontal: 15),
+                                child: textoutfit(
+                                    color: Colors.black87,
+                                    text:"${searchList[index].description}",
+
+                                    fontSize: 15,textAlign: TextAlign.start,maxLine: isReadMore ?5:1,overflow: TextOverflow.ellipsis),
+                              ),
+                              GestureDetector(onTap: () {
+                                setState(() {
+                                  isReadMore = !isReadMore;
+                                });
+                              },child: Padding(
+                                padding: const EdgeInsets.symmetric(horizontal: 10),
+                                child: Row(mainAxisAlignment: MainAxisAlignment.end,
+                                  children: [
+                                    textoutfit(color: Colors.grey,text:isReadMore?"Read less": "more",),
                                   ],
                                 ),
-                              ),
+                              )),
                             ],
-                          ),
-                        ),
-                      ),
-                      SizedBox( /* height:MediaQuery.of(context).size.height * 0.87,*/
-
-                        child: SingleChildScrollView(
-                          scrollDirection: Axis.vertical,
-                          child: Column(
-                            children: [
-                              Container(
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                              vertical: 15, horizontal: 15),
-                                          child: SizedBox(
-                                            height:
-                                            MediaQuery.of(context).size.height * 0.05,
-                                            width:
-                                            MediaQuery.of(context).size.height * 0.05,
-                                            child: CircleAvatar(
-                                              backgroundImage:
-                                              AssetImage('images/Pokemon Pikachu Ash Wallpaper 4K.jpg'),
-                                            ),
-                                          ),
-                                        ),
-                                        Column(
-                                          children: [
-                                            textoutfit(
-                                                color: Colors.black,
-                                                text: "pikachu",
-                                                fontSize: 15,
-                                                fontWeight: FontWeight.w600),
-                                            textoutfit(
-                                                color: Colors.grey, text: "pikachu"),
-                                          ],
-                                        ),
-                                        Spacer(),
-                                        PopupMenuButton(
-                                          icon: const Icon(Icons.more_vert,
-                                              color: Colors.black),
-                                          itemBuilder: (ctx) => [
-                                            _buildPopupMenuItem('Search'),
-                                            _buildPopupMenuItem('Upload'),
-                                            _buildPopupMenuItem('Copy'),
-                                            _buildPopupMenuItem('Exit'),
-                                          ],
-                                        )
-                                      ],
-                                    ),
-                                    Container(
-                                      height: MediaQuery.of(context).size.width * 1,
-                                      width: MediaQuery.of(context).size.width * 1,
-                                      decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                              image: AssetImage("images/Pokemon Pikachu Ash Wallpaper 4K.jpg"),
-                                              fit: BoxFit.cover)),
-                                    ),
-                                    Row(
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              right: 2, left: 25, top: 10),
-                                          child: GestureDetector(
-                                              onTap: () {
-                                                setState(() {
-                                                  selectedLike = !selectedLike;
-                                                  if(selectedLike==true){
-                                                    likeplus++;
-                                                  }
-                                                  print("likeplus-=-------${likeplus}");
-
-                                                });
-
-                                              },
-                                              child: Icon(
-                                                selectedLike
-                                                    ? Icons.favorite
-                                                    : Icons.favorite_border,
-                                                color: selectedLike
-                                                    ? Colors.red
-                                                    : Colors.grey,
-                                                size: 25,
-                                              )),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              right: 2, left: 8, top: 10),
-                                          child: textoutfit(
-                                              color: Colors.grey,
-                                              text: "$likeplus Likes",
-                                              fontSize: 15),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              right: 2, left: 20, top: 10),
-                                          child: GestureDetector(
-                                            onTap: () {
-                                              showModalBottomSheet(context: context,isScrollControlled: true, builder: (context) {
-                                                return Container()
-                                                // return MyStatefulWidget();
-                                                /*return Container(
-                                                   decoration: BoxDecoration(color: Colors.white12),
-                                                   child: Column(
-                                                     mainAxisAlignment: MainAxisAlignment.start,
-                                                     children: <Widget>[
-                                                       TextFormField(
-                                                         controller: textController,
-
-                                                       ),
-                                                       TextButton(
-                                                         onPressed: () {
-                                                           setState(() {
-                                                             if(textController.text.length>0){
-                                                               text.add(textController.text);
-                                                               textController.clear();
-                                                             } else{
-                                                               ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                                                                 content: Text("Text is empty"),
-                                                               ));
-                                                             }
-                                                           });
-                                                         },
-                                                         child: Text("add"),
-                                                       ),
-                                                       Text(text.isNotEmpty?text.toString():""),
-                                                     ],
-                                                   ),
-                                                 )*/;
-                                              },);
-                                            },
-                                            child: Icon(
-                                              Icons.chat_bubble_outline,
-                                              color: Colors.grey,
-                                              size: 25,
-                                            ),
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              right: 2, left: 8, top: 10),
-                                          child: textoutfit(
-                                              color: Colors.grey,
-                                              text: "$textSend comments",
-                                              fontSize: 15),
-                                        ),
-                                        Spacer(),
-                                        Padding(
-                                          padding:  EdgeInsets.all(10),
-                                          child: InkWell(onTap: () {
-                                            // _onShare(context);
-                                          },
-                                            child: Icon(
-                                              Icons.share,
-                                              color: Colors.grey,
-                                              size: 25,
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Padding(
-                                      padding:  EdgeInsets.symmetric(horizontal: 15),
-                                      child: textoutfit(
-                                          color: Colors.black87,
-                                          text:
-                                          "Once Brahma divided sugarcane among his sons and each of them ate his share, but the Kumhara who was greatly absorbed in his work, forgot to eat. The piece which he had kept near his clay lump struck root and soon grew into a sugarcane plant. A few days later, when Brahma asked his sons for sugarcane, none of them could give it to him, excepting the Kumhara who offered a full plant. Brahma was pleased by the devotion of the potter to his work and awarded",
-                                          fontSize: 15,textAlign: TextAlign.center,maxLine: isReadMore ?5:1,overflow: TextOverflow.ellipsis),
-                                    ),
-                                    GestureDetector(onTap: () {
-                                      setState(() {
-                                        isReadMore = !isReadMore;
-                                      });
-                                    },child: Padding(
-                                      padding: const EdgeInsets.symmetric(horizontal: 10),
-                                      child: Row(mainAxisAlignment: MainAxisAlignment.end,
-                                        children: [
-                                          textoutfit(color: Colors.grey,text:isReadMore?"Read less": "more",),
-                                        ],
-                                      ),
-                                    )),
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                              vertical: 15, horizontal: 15),
-                                          child: SizedBox(
-                                            height:
-                                            MediaQuery.of(context).size.height * 0.05,
-                                            width:
-                                            MediaQuery.of(context).size.height * 0.05,
-                                            child: CircleAvatar(
-                                              backgroundImage:
-                                              AssetImage('images/Pokemon Pikachu 🙊.jpg'),
-                                            ),
-                                          ),
-                                        ),
-                                        Column(
-                                          children: [
-                                            textoutfit(
-                                                color: Colors.black,
-                                                text: "pikachu one",
-                                                fontSize: 15,
-                                                fontWeight: FontWeight.w600),
-                                            textoutfit(
-                                                color: Colors.grey, text: "pikachu one"),
-                                          ],
-                                        ),
-                                        Spacer(),
-                                        PopupMenuButton(
-                                          icon: const Icon(Icons.more_vert,
-                                              color: Colors.black),
-                                          itemBuilder: (ctx) => [
-                                            _buildPopupMenuItem('Search'),
-                                            _buildPopupMenuItem('Upload'),
-                                            _buildPopupMenuItem('Copy'),
-                                            _buildPopupMenuItem('Exit'),
-                                          ],
-                                        )
-                                      ],
-                                    ),
-                                    Container(
-                                      height: MediaQuery.of(context).size.width * 1,
-                                      width: MediaQuery.of(context).size.width * 1,
-                                      decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                              image: AssetImage("images/Pokemon Pikachu 🙊.jpg"),
-                                              fit: BoxFit.cover)),
-                                    ),
-                                    Row(
-                                      children: [
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              right: 2, left: 25, top: 10),
-                                          child: GestureDetector(
-                                              onTap: () {
-                                                setState(() {
-                                                  selectedLike = !selectedLike;
-                                                  if(selectedLike==true){
-                                                    likeplus++;
-                                                  }
-
-
-                                                });
-
-                                              },
-                                              child: Icon(
-                                                selectedLike
-                                                    ? Icons.favorite
-                                                    : Icons.favorite_border,
-                                                color: selectedLike
-                                                    ? Colors.red
-                                                    : Colors.grey,
-                                                size: 25,
-                                              )),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              right: 2, left: 8, top: 10),
-                                          child: textoutfit(
-                                              color: Colors.grey,
-                                              text: "$likeplus Likes",
-                                              fontSize: 15),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              right: 2, left: 20, top: 10),
-                                          child: GestureDetector(
-                                            onTap: () {
-                                              showModalBottomSheet(context: context,isScrollControlled: true, builder: (context) {
-                                                return Container();
-                                                // return MyStatefulWidget();
-                                              },);
-                                            },
-                                            child: Icon(
-                                              Icons.chat_bubble_outline,
-                                              color: Colors.grey,
-                                              size: 25,
-                                            ),
-                                          ),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.only(
-                                              right: 2, left: 8, top: 10),
-                                          child: textoutfit(
-                                              color: Colors.grey,
-                                              text: "$textSend comments",
-                                              fontSize: 15),
-                                        ),
-                                        Spacer(),
-                                        Padding(
-                                          padding: const EdgeInsets.all(10),
-                                          child: Icon(
-                                            Icons.share,
-                                            color: Colors.grey,
-                                            size: 25,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Padding(
-                                      padding:  EdgeInsets.symmetric(horizontal: 15),
-                                      child: textoutfit(
-                                          color: Colors.black87,
-                                          text:
-                                          "Once Brahma divided sugarcane among his sons and each of them ate his share, but the Kumhara who was greatly absorbed in his work, forgot to eat. The piece which he had kept near his clay lump struck root and soon grew into a sugarcane plant. A few days later, when Brahma asked his sons for sugarcane, none of them could give it to him, excepting the Kumhara who offered a full plant. Brahma was pleased by the devotion of the potter to his work and awarded",
-                                          fontSize: 15,textAlign: TextAlign.center,maxLine: isReadMore ?5:1,overflow: TextOverflow.ellipsis),
-                                    ),
-                                    GestureDetector(onTap: () {
-                                      setState(() {
-                                        isReadMore = !isReadMore;
-                                      });
-                                    },child: Padding(
-                                      padding: const EdgeInsets.symmetric(horizontal: 10),
-                                      child: Row(mainAxisAlignment: MainAxisAlignment.end,
-                                        children: [
-                                          textoutfit(color: Colors.grey,text:isReadMore?"Read less": "more",),
-                                        ],
-                                      ),
-                                    )),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
+                          );
+                        },),
                       ),
                     ]),
               ),

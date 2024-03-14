@@ -49,6 +49,7 @@ android {
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+
     }
 
     buildTypes {
@@ -65,4 +66,6 @@ flutter {
     source '../..'
 }
 
-dependencies {}
+dependencies {
+
+}
